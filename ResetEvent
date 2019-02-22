@@ -1,0 +1,17 @@
+private ManualResetEvent _resetEvent;
+public void Do()
+{
+  using (_resetEvent = new ManualResetEvent(true))
+  {
+  try{
+  //Test
+  var x = "2";
+  var y = x + x;
+  Console.WriteLine(y);
+    }
+                finally
+                {
+                }
+                _resetEvent.WaitOne();
+                }
+                }
